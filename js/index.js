@@ -115,9 +115,9 @@
         hospitalsList += `
         <div class="hospital-container">
             <div class="hospital-container-background">
-                <div class="hospital-info-container"> 
+                <div class="hospital-info-container">
                     <div class="hospital-address">
-                        <span>${address[0]}</span> 
+                        <span>${address[0]}</span>
                         <span>${address[1]}</span>
                     </div>
                     <div class="hospital-phone-number">Ph: ${phone}</div>
@@ -151,7 +151,7 @@
     phoneNumber = hospital.phoneNumber;
     numBed = hospital.numBeds;
     var rating = hospital.rating;
-    
+
     createMarker(latlng, name, address, statusText, phoneNumber, numBed, index, rating);
     setMarkerDirections(hospital.coordinates.latitude, hospital.coordinates.longitude, index);
     setMarkerAnimations(markers[index], search)
@@ -253,7 +253,7 @@ function searchHospitals() {
     search = true;
     clearLocations();
 } else {
-    foundHospitals = hospitals; 
+    foundHospitals = hospitals;
 }
 displayhospitals(foundHospitals);
 showhospitalsMarker(foundHospitals, search);
@@ -267,9 +267,9 @@ function saveCurrentLocation(position) {
 
 function errorHandler(err) {
     if(err.code == 1) {
-       alert("Error: Access is denied!");
+       alert("Welcome");
     } else if( err.code == 2) {
-       alert("Error: Position is unavailable!");
+       alert("Welcome!");
     }
  }
 
@@ -285,7 +285,7 @@ function getLocation(){
  }
 
 function setOnClickListenerAddress(lat, lng) {
-    
+
             var url = "https://www.google.com/maps/dir/?api=1";
             var origin = "&origin=" + currLatitude + "," + currLongitude;
             var destination = "&destination=" + lat + "," + lng;
@@ -293,10 +293,9 @@ function setOnClickListenerAddress(lat, lng) {
             console.log(newUrl);
             window.open(newUrl, '_blank');
 
-            
+
 }
 
 
 
 /* experimental code here */
-
