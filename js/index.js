@@ -267,7 +267,7 @@ function saveCurrentLocation(position) {
 
 function errorHandler(err) {
     if(err.code == 1) {
-       alert("Welcome");
+       alert("Welcome, Press 'Ok'");
     } else if( err.code == 2) {
        alert("Welcome!");
     }
